@@ -1,0 +1,101 @@
+ip adder show
+ping -c 5 www.google.com
+wifi-menu
+ip a
+dhcpcd (  ifneed  )
+nano /etc/pacman.d/mirrorlist
+pacman -Syyy
+fisk -l
+fisk -l | more
+lsblk
+fdisk /dev/nvme01
+p
+all 
+g
+n
++500M
+Yes
+t
+1
+n
+
++75G
+y
+n
+
+
+p
+w
+
+
+lsblk
+mkfs.fat -F32 /dev/nvme0n1p1
+mkfs.ext4 /dev/nvme0n1p2
+mkfs.ext4 /dev/nvme0n1p3
+mount /dev/nvme0n1p2 /mnt
+mkdir /mnt/home
+mount /dev/nvme0n1p3 /mnt/home
+mount 
+df -h
+mkdir /mnt/etc
+genfstab -U -p /mnt >> /mnt/etc/fstab
+cat /mnt/etc/fstab
+pacstrap -i /mnt base
+arch-chroot /mnt
+pacman -S linux linux-headers linux-lts linux-lts-headers
+pacman -S nano 
+pacman -S openssh base-devel 
+systemctl enable sshd
+pacman -S networkmanager wpa_supplicant wireless_tools netctl dialog
+systemctl enable NetworkManager
+mkinitcpio -p linux
+mkinitcpio -p linux-lts
+nano /etc/locale.gen
+locale.gen
+passwd
+useradd -m -g users -G wheel abjs
+passwd abjs
+which sudo
+if not work(pacman -S sudo)
+EDITOR=nano visudo
+un comment %wheel ALL=(ALL) ALL
+grub
+pacman -S grub efibootmgr dosfstools os-prober mtools 
+mkdir -p /boot/EFI
+mount /dev/nvme0n1p1 /boot/EFI
+grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+mkdir /boot/grub/locale
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-mkconfig -o /boot/grub/grub.cfg
+fallocate -l 8G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+cp /etc/fstab /etc/fstab.bak
+echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
+cat /etc/fstab
+pacman -S intel-ucode
+pacman -S xf86-video-intel libgl mesa
+pacman -S virtualbox-guest-utils xf86-video-vmware
+exit
+umount -a
+reboot
+this from
+https://wiki.learnlinux.tv/index.php/How_to_Install_Arch_Linux
+
+
+
+
+
+
+
+
+
+
+
+pacman -S amd-ucode amdgpu mesa
+pacman -S xorg-server
+ pacman -S nvidia nvidia-utils nvidia-lts
+
+
+
+
