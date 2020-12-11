@@ -1,1 +1,1 @@
-pacman -S linux linux-headers linux-lts linux-lts-headers nano git base-devel networkmanager wpa_supplicant wireless_tools netctl dialog amd-ucode amdgpu mesa xorg-server nvidia nvidia-utils nvidia-lts grub efibootmgr dosfstools os-prober mtools 
+pacman -S linux linux-headers linux-lts linux-lts-headers nano git base-devel networkmanager bluez bluez-utils wpa_supplicant wireless_tools netctl dialog amd-ucode amdgpu mesa xorg-server nvidia nvidia-utils nvidia-lts grub efibootmgr dosfstools os-prober mtools 
