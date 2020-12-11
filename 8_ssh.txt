@@ -1,0 +1,1 @@
+pacman -S  openssh && systemctl enable sshd &&systemctl start sshd

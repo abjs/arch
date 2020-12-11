@@ -1,0 +1,8 @@
+passwd
+useradd -m -g users -G wheel abjs
+passwd abjs
+
+which sudo
+if not work(pacman -S sudo)
+EDITOR=nano visudo
+un comment %wheel ALL=(ALL) ALL

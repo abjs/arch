@@ -1,0 +1,5 @@
+mount /dev/nvme0n1p2 /mnt
+mkdir /mnt/home
+mount /dev/nvme0n1p3 /mnt/home
+mount 
+df -h
